@@ -3,6 +3,25 @@ body{
     color: white;
     font-family: arial;
 }
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* Box appearance */
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+
+  /* Layout control */
+  max-width: 500px;
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+
 .title{
     font-size: 30px;
     font-weight: bold;
@@ -20,6 +39,11 @@ body{
     cursor: pointer;
     margin-bottom: 40px;
 }
+.move-button:hover{
+    transform: scale(1.05);
+    border-color: #00ffff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
 .js-result{
     font-size: 25px;
     font-weight: bold;
@@ -28,10 +52,69 @@ body{
     margin-top: 50px;
 }
 .reset-button, .auto-button{
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    font-weight: bold;
     background-color: white;
     color: black;
     border: none;
     font-size: 15px;
     padding: 7px;
     cursor: pointer;
+}
+.reset-button:hover,
+.auto-button:hover{
+    background-color: #00ffff; /* Cyan background on hover */
+    color: black;
+    transform: scale(1.05); /* Slight scale for pop effect */
+
+}
+
+
+@media (max-width: 768px) {
+  .move-button {
+    width: 90px;
+    height: 90px;
+  }
+
+  .move-icon {
+    height: 40px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .js-result,
+  .js-moves,
+  .js-score {
+    font-size: 1rem;
+  }
+
+  .reset-button,
+  .auto-button {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .move-button {
+    width: 70px;
+    height: 70px;
+  }
+
+  .move-icon {
+    height: 35px;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .reset-button,
+  .auto-button {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
 }
